@@ -204,6 +204,8 @@ public class GettinFunkyScript : MonoBehaviour {
             {
                 curPos += bomb.GetSerialNumberNumbers().ElementAt(i);
             }
+            if (curPos == 36)
+                curPos = 0;
             if (!bomb.IsPortPresent(Port.RJ45))
                 curTable = 1;
             Debug.LogFormat("[Gettin' Funky #{0}] The first two digits of the serial number form a number that is not in one of the tables", moduleId);
@@ -349,7 +351,7 @@ public class GettinFunkyScript : MonoBehaviour {
                 case 13:
                     if (!ignore)
                         lastMove = "U";
-                    for (int j = 0; j < 2; j++)
+                    for (int j = 0; j < 5; j++)
                     {
                         if (curPos == 0 || curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
                             curPos += 30;
