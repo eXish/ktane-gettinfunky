@@ -17,7 +17,7 @@ MonoBehaviour:
   description: "Follow some moves from the Cha Cha Slide to get a number and convert
     it to binary.\n\nHTML: https://ktane.timwi.de/HTML/Gettin\u2019%20Funky.html\nPDF:
     https://ktane.timwi.de/PDF/Gettin\u2019%20Funky.pdf\n\nGettin' Funky (gettinFunkyModule)
-    v1.0.2\nModule and Concept by eXish\nTwitch Plays supported"
-  version: 1.0.2
+    v1.0.3\nModule and Concept by eXish\nTwitch Plays supported"
+  version: 1.0.3
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 7106a89a51ac8a349a4619c3ca802d96, type: 3}

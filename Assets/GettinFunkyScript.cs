@@ -83,43 +83,43 @@ public class GettinFunkyScript : MonoBehaviour {
 
     void PressButton(KMSelectable pressed)
     {
-        if (moduleSolved != true)
+        pressed.AddInteractionPunch();
+        audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, pressed.transform);
+        if (buttons[0] == pressed && !moduleSolved)
         {
-            pressed.AddInteractionPunch();
-            audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, pressed.transform);
-            if (buttons[0] == pressed)
+            if (sequence != null)
             {
-                if (sequence != null)
-                {
-                    StopCoroutine(sequence);
-                    sequence = null;
-                    customplayer.Stop();
-                }
-                sequence = StartCoroutine(PlaySequence());
+                StopCoroutine(sequence);
+                sequence = null;
+                customplayer.Stop();
             }
-            else if (buttons[1] == pressed)
+            sequence = StartCoroutine(PlaySequence());
+        }
+        else if (buttons[1] == pressed)
+        {
+            if (sequence != null)
             {
-                if (sequence != null)
-                {
-                    StopCoroutine(sequence);
-                    sequence = null;
-                    customplayer.Stop();
-                }
-                if (strikeplayer != null)
-                {
-                    StopCoroutine(strikeplayer);
-                    strikeplayer = null;
-                }
-                customplayer.clip = customsounds[0];
-                customplayer.Play();
-                if (flash != null)
-                {
-                    StopCoroutine(flash);
-                    flash = null;
-                    lights[0].enabled = false;
-                    lights[1].enabled = false;
-                }
-                flash = StartCoroutine(FlashButton(0));
+                StopCoroutine(sequence);
+                sequence = null;
+                customplayer.Stop();
+            }
+            if (strikeplayer != null)
+            {
+                StopCoroutine(strikeplayer);
+                strikeplayer = null;
+            }
+            customplayer.clip = customsounds[0];
+            customplayer.Play();
+            if (flash != null)
+            {
+                StopCoroutine(flash);
+                flash = null;
+                lights[0].enabled = false;
+                lights[1].enabled = false;
+            }
+            flash = StartCoroutine(FlashButton(0));
+            if (!moduleSolved)
+            {
                 input += "1";
                 if (!input.Equals(correct.Substring(0, input.Length)))
                 {
@@ -134,29 +134,32 @@ public class GettinFunkyScript : MonoBehaviour {
                     StartCoroutine(SolveSound());
                 }
             }
-            else if (buttons[2] == pressed)
+        }
+        else if (buttons[2] == pressed)
+        {
+            if (sequence != null)
             {
-                if (sequence != null)
-                {
-                    StopCoroutine(sequence);
-                    sequence = null;
-                    customplayer.Stop();
-                }
-                if (strikeplayer != null)
-                {
-                    StopCoroutine(strikeplayer);
-                    strikeplayer = null;
-                }
-                customplayer.clip = customsounds[0];
-                customplayer.Play();
-                if (flash != null)
-                {
-                    StopCoroutine(flash);
-                    flash = null;
-                    lights[0].enabled = false;
-                    lights[1].enabled = false;
-                }
-                flash = StartCoroutine(FlashButton(1));
+                StopCoroutine(sequence);
+                sequence = null;
+                customplayer.Stop();
+            }
+            if (strikeplayer != null)
+            {
+                StopCoroutine(strikeplayer);
+                strikeplayer = null;
+            }
+            customplayer.clip = customsounds[0];
+            customplayer.Play();
+            if (flash != null)
+            {
+                StopCoroutine(flash);
+                flash = null;
+                lights[0].enabled = false;
+                lights[1].enabled = false;
+            }
+            flash = StartCoroutine(FlashButton(1));
+            if (!moduleSolved)
+            {
                 input += "0";
                 if (!input.Equals(correct.Substring(0, input.Length)))
                 {
