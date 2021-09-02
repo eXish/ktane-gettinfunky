@@ -861,6 +861,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     break;
                 case 27:
+                    if (!ignore)
+                        lastMove = "D";
                     int index = i + 1;
                     for (int j = 0; j < index; j++)
                     {
