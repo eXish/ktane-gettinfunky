@@ -44,6 +44,7 @@ public class GettinFunkyScript : MonoBehaviour {
     private string input = "";
     private string correct = "";
     private string lastMove = "";
+    private string lastMove2 = "";
 
     static int moduleIdCounter = 1;
     int moduleId;
@@ -226,7 +227,11 @@ public class GettinFunkyScript : MonoBehaviour {
                 case 1:
                 case 2:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "L";
+                    }
                     if (curPos == 0 || curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24 || curPos == 30)
                         curPos += 5;
                     else
@@ -240,7 +245,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 3:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "L";
+                    }
                     for (int j = 0; j < 3; j++)
                     {
                         if (curPos == 0 || curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24 || curPos == 30)
@@ -257,7 +266,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 4:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "D";
+                    }
                     if (curPos == 30 || curPos == 31 || curPos == 32 || curPos == 33 || curPos == 34 || curPos == 35)
                         curPos -= 30;
                     else
@@ -271,7 +284,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 5:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "D";
+                    }
                     for (int j = 0; j < 2; j++)
                     {
                         if (curPos == 30 || curPos == 31 || curPos == 32 || curPos == 33 || curPos == 34 || curPos == 35)
@@ -289,7 +306,11 @@ public class GettinFunkyScript : MonoBehaviour {
                 case 6:
                 case 7:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "R";
+                    }
                     if (curPos == 5 || curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29 || curPos == 35)
                         curPos -= 5;
                     else
@@ -303,7 +324,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 8:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "R";
+                    }
                     for (int j = 0; j < 3; j++)
                     {
                         if (curPos == 5 || curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29 || curPos == 35)
@@ -321,7 +346,11 @@ public class GettinFunkyScript : MonoBehaviour {
                 case 9:
                 case 10:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "U";
+                    }
                     if (curPos == 0 || curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
                         curPos += 30;
                     else
@@ -336,7 +365,11 @@ public class GettinFunkyScript : MonoBehaviour {
                 case 11:
                 case 12:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "U";
+                    }
                     for (int j = 0; j < 2; j++)
                     {
                         if (curPos == 0 || curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
@@ -353,7 +386,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 13:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "U";
+                    }
                     for (int j = 0; j < 5; j++)
                     {
                         if (curPos == 0 || curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
@@ -370,7 +407,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 14:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "R";
+                    }
                     curTable = curTable == 0 ? 1 : 0;
                     if (curPos == 5 || curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29 || curPos == 35)
                         curPos -= 5;
@@ -385,7 +426,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 15:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "R";
+                    }
                     curTable = curTable == 0 ? 1 : 0;
                     for (int j = 0; j < 2; j++)
                     {
@@ -403,7 +448,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 16:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "L";
+                    }
                     curTable = curTable == 0 ? 1 : 0;
                     if (curPos == 0 || curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24 || curPos == 30)
                         curPos += 5;
@@ -418,7 +467,11 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 17:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "L";
+                    }
                     curTable = curTable == 0 ? 1 : 0;
                     for (int j = 0; j < 2; j++)
                     {
@@ -436,10 +489,13 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 18:
                     string store = lastMove;
+                    string store2 = lastMove2;
                     if (lastMove == "")
                         lastMove = "R";
                     if (lastMove == "R")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "D";
                         if (curPos == 30 || curPos == 31 || curPos == 32 || curPos == 33 || curPos == 34 || curPos == 35)
                             curPos -= 30;
@@ -448,6 +504,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "D")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "L";
                         if (curPos == 0 || curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24 || curPos == 30)
                             curPos += 5;
@@ -456,6 +514,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "L")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "U";
                         if (curPos == 0 || curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
                             curPos += 30;
@@ -464,6 +524,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "U")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "R";
                         if (curPos == 5 || curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29 || curPos == 35)
                             curPos -= 5;
@@ -472,6 +534,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "UL")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "UR";
                         if (curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29 || curPos == 35)
                             curPos -= 11;
@@ -484,6 +548,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "UR")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "DR";
                         if (curPos == 5 || curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29)
                             curPos++;
@@ -496,6 +562,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "DR")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "DL";
                         if (curPos == 0 || curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24)
                             curPos += 11;
@@ -508,6 +576,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "DL")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "UL";
                         if (curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
                             curPos += 29;
@@ -522,6 +592,7 @@ public class GettinFunkyScript : MonoBehaviour {
                     if (ignore)
                     {
                         lastMove = store;
+                        lastMove2 = store2;
                         move += " [Ignored]";
                         ignorelog = true;
                     }
@@ -529,10 +600,13 @@ public class GettinFunkyScript : MonoBehaviour {
                 case 19:
                 case 20:
                     store = lastMove;
+                    store2 = lastMove2;
                     if (lastMove == "")
                         lastMove = "L";
                     if (lastMove == "L")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "D";
                         if (curPos == 30 || curPos == 31 || curPos == 32 || curPos == 33 || curPos == 34 || curPos == 35)
                             curPos -= 30;
@@ -541,6 +615,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "U")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "L";
                         if (curPos == 0 || curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24 || curPos == 30)
                             curPos += 5;
@@ -549,6 +625,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "R")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "U";
                         if (curPos == 0 || curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
                             curPos += 30;
@@ -557,6 +635,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "D")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "R";
                         if (curPos == 5 || curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29 || curPos == 35)
                             curPos -= 5;
@@ -565,6 +645,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "DR")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "UR";
                         if (curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29 || curPos == 35)
                             curPos -= 11;
@@ -577,6 +659,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "DL")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "DR";
                         if (curPos == 5 || curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29)
                             curPos++;
@@ -589,6 +673,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "UL")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "DL";
                         if (curPos == 0 || curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24)
                             curPos += 11;
@@ -601,6 +687,8 @@ public class GettinFunkyScript : MonoBehaviour {
                     }
                     else if (lastMove == "UR")
                     {
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = "UL";
                         if (curPos == 1 || curPos == 2 || curPos == 3 || curPos == 4 || curPos == 5)
                             curPos += 29;
@@ -615,6 +703,7 @@ public class GettinFunkyScript : MonoBehaviour {
                     if (ignore)
                     {
                         lastMove = store;
+                        lastMove2 = store2;
                         move += " [Ignored]";
                         ignorelog = true;
                     }
@@ -625,6 +714,9 @@ public class GettinFunkyScript : MonoBehaviour {
                     {
                         curTable = allTable[i - 1];
                         curPos = allPos[i - 1];
+                        string temp = lastMove;
+                        lastMove = lastMove2;
+                        lastMove2 = temp;
                         move = "Undo previous";
                     }
                     else
@@ -663,26 +755,35 @@ public class GettinFunkyScript : MonoBehaviour {
                     break;
                 case 24:
                     store = lastMove;
+                    store2 = lastMove2;
                     string[] pos = new string[] { "UL", "UR", "DL", "DR" };
                     int[] offsets = new int[] { -7, -5, 5, 7 };
                     if (curPos == 0)
                     {
                         curPos = 7;
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[3];
                     }
                     else if (curPos == 5)
                     {
                         curPos = 10;
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[2];
                     }
                     else if (curPos == 30)
                     {
                         curPos = 25;
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[1];
                     }
                     else if (curPos == 35)
                     {
                         curPos = 28;
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[0];
                     }
                     else if (curPos > 0 && curPos < 5)
@@ -694,6 +795,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos + 7];
                         int temp = HighPos(compare);
                         curPos += offsets[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[temp];
                     }
                     else if (curPos > 30 && curPos < 35)
@@ -705,6 +808,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = -1;
                         int temp = HighPos(compare);
                         curPos += offsets[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[temp];
                     }
                     else if (curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24)
@@ -716,6 +821,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos + 7];
                         int temp = HighPos(compare);
                         curPos += offsets[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[temp];
                     }
                     else if (curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29)
@@ -727,6 +834,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = -1;
                         int temp = HighPos(compare);
                         curPos += offsets[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[temp];
                     }
                     else
@@ -738,12 +847,15 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos + 7];
                         int temp = HighPos(compare);
                         curPos += offsets[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos[temp];
                     }
                     move = "Diagonally adjacent cell with highest number";
                     if (ignore)
                     {
                         lastMove = store;
+                        lastMove2 = store2;
                         move += " [Ignored]";
                         ignorelog = true;
                     }
@@ -751,6 +863,7 @@ public class GettinFunkyScript : MonoBehaviour {
                 case 25:
                 case 26:
                     store = lastMove;
+                    store2 = lastMove2;
                     string[] pos2 = new string[] { "U", "R", "D", "L" };
                     int[] offsets2 = new int[] { -6, 1, 6, -1 };
                     if (curPos == 0)
@@ -762,6 +875,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = 100;
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else if (curPos == 5)
@@ -773,6 +888,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos - 1];
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else if (curPos == 30)
@@ -784,6 +901,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = 100;
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else if (curPos == 35)
@@ -795,6 +914,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos - 1];
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else if (curPos > 0 && curPos < 5)
@@ -806,6 +927,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos - 1];
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else if (curPos > 30 && curPos < 35)
@@ -817,6 +940,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos - 1];
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else if (curPos == 6 || curPos == 12 || curPos == 18 || curPos == 24)
@@ -828,6 +953,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = 100;
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else if (curPos == 11 || curPos == 17 || curPos == 23 || curPos == 29)
@@ -839,6 +966,8 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos - 1];
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     else
@@ -850,19 +979,26 @@ public class GettinFunkyScript : MonoBehaviour {
                         compare[3] = tables[curTable][curPos - 1];
                         int temp = LowPos(compare);
                         curPos += offsets2[temp];
+                        if (store != "")
+                            lastMove2 = store;
                         lastMove = pos2[temp];
                     }
                     move = "Orthogonally adjacent cell with lowest number";
                     if (ignore)
                     {
                         lastMove = store;
+                        lastMove2 = store2;
                         move += " [Ignored]";
                         ignorelog = true;
                     }
                     break;
                 case 27:
                     if (!ignore)
+                    {
+                        if (lastMove != "")
+                            lastMove2 = lastMove;
                         lastMove = "D";
+                    }
                     int index = i + 1;
                     for (int j = 0; j < index; j++)
                     {
